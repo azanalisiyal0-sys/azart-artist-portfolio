@@ -4,7 +4,7 @@
         "title": "Samurai Under the Red Moon",
         "category": "abcc",
         "year": 2026,
-        "imageURL": "../assets/artworks/samurai-under-the-red-moon.png",
+        "imageURL": "assets/artworks/samurai-under-the-red-moon.png",
         "featured": false,
         "software": "Sketchbook",
         "description": "A lone samurai rendered in silhouette against a deep red moon."
