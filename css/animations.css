@@ -1,0 +1,1491 @@
+/* =========================================================
+   AZART — 3D ANIMATIONS
+   PURE CSS
+   NO LIBRARIES
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   PAGE ENTRANCE
+   ========================================================= */
+
+body {
+    animation: pageEnter 0.8s ease both;
+}
+
+@keyframes pageEnter {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    animation: headerEnter 0.8s ease both;
+}
+
+@keyframes headerEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo img {
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.5s cubic-bezier(.2,.8,.2,1),
+        filter 0.4s ease;
+
+}
+
+.logo:hover img {
+
+    transform:
+        perspective(700px)
+        rotateY(-15deg)
+        rotateX(6deg)
+        translateZ(15px)
+        scale(1.06);
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav a {
+
+    position: relative;
+
+    transition:
+        transform 0.3s ease,
+        letter-spacing 0.3s ease;
+
+}
+
+nav a:hover {
+
+    transform:
+        translateY(-3px);
+
+    letter-spacing: 0.02em;
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero,
+.portfolio-hero,
+.contact-hero {
+
+    animation:
+        heroEnter
+        1s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+
+}
+
+@keyframes heroEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(50px)
+            rotateX(8deg);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotateX(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.hero h1,
+.portfolio-hero h1,
+.contact-hero h1 {
+
+    animation:
+        titleEnter
+        1s
+        0.1s
+        cubic-bezier(.2,.8,.2,1)
+        both;
+
+}
+
+@keyframes titleEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateZ(-80px)
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateZ(0)
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.hero p,
+.portfolio-hero p,
+.contact-hero p {
+
+    animation:
+        textEnter
+        0.9s
+        0.2s
+        ease-out
+        both;
+
+}
+
+@keyframes textEnter {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   BUTTON 3D
+   ========================================================= */
+
+button,
+.cta,
+.contact-submit {
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.3s cubic-bezier(.2,.8,.2,1),
+        box-shadow 0.3s ease;
+
+}
+
+button:hover,
+.cta:hover,
+.contact-submit:hover {
+
+    transform:
+        perspective(700px)
+        translateY(-5px)
+        translateZ(12px)
+        rotateX(4deg)
+        scale(1.03);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.35);
+
+}
+
+button:active,
+.cta:active,
+.contact-submit:active {
+
+    transform:
+        translateY(1px)
+        scale(.98);
+
+}
+
+
+/* =========================================================
+   PORTFOLIO GRID
+   ========================================================= */
+
+#artwork-grid {
+
+    perspective: 1800px;
+
+    perspective-origin: 50% 50%;
+
+}
+
+
+/* =========================================================
+   ARTWORK CARD
+   ========================================================= */
+
+.artwork-card {
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    /*
+       NORMAL STATE
+    */
+
+    transform:
+        perspective(1200px)
+        rotateX(0deg)
+        rotateY(0deg)
+        translateZ(0)
+        scale(1);
+
+    transition:
+        transform 0.7s cubic-bezier(.16,1,.3,1),
+        box-shadow 0.7s ease;
+
+    will-change: transform;
+
+    isolation: isolate;
+
+}
+
+
+/* =========================================================
+   STRONG 3D HOVER
+   ========================================================= */
+
+.artwork-card:hover {
+
+    /*
+       THE MAIN 3D EFFECT
+    */
+
+    transform:
+        perspective(1200px)
+        rotateX(10deg)
+        rotateY(-12deg)
+        translateZ(55px)
+        translateY(-18px)
+        scale(1.06);
+
+    /*
+       Floating shadow
+    */
+
+    box-shadow:
+
+        0 45px 70px rgba(0,0,0,.55),
+
+        0 20px 30px rgba(0,0,0,.35);
+
+}
+
+
+/* =========================================================
+   ALTERNATING CARD TILT
+   ========================================================= */
+
+/*
+   Every second card tilts in the opposite direction.
+*/
+
+.artwork-card:nth-child(even):hover {
+
+    transform:
+        perspective(1200px)
+        rotateX(10deg)
+        rotateY(12deg)
+        translateZ(55px)
+        translateY(-18px)
+        scale(1.06);
+
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+   ========================================================= */
+
+.artwork-card .artwork-image,
+.artwork-card .image-container,
+.artwork-card figure {
+
+    transform-style: preserve-3d;
+
+}
+
+
+/* =========================================================
+   ARTWORK IMAGE
+   ========================================================= */
+
+.artwork-card img {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transform-style: preserve-3d;
+
+    transform:
+        translateZ(0)
+        scale(1);
+
+    transition:
+        transform 0.8s cubic-bezier(.16,1,.3,1),
+        filter 0.6s ease;
+
+    will-change: transform;
+
+}
+
+
+/* =========================================================
+   IMAGE COMES TOWARD USER
+   ========================================================= */
+
+.artwork-card:hover img {
+
+    transform:
+        translateZ(70px)
+        scale(1.14);
+
+    filter:
+        brightness(1.08)
+        contrast(1.06)
+        saturate(1.05);
+
+}
+
+
+/* =========================================================
+   CARD INFORMATION
+   ========================================================= */
+
+.artwork-card-info {
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transform:
+        translateZ(0);
+
+    transition:
+        transform 0.7s cubic-bezier(.16,1,.3,1);
+
+}
+
+
+/* =========================================================
+   TEXT COMES FORWARD
+   ========================================================= */
+
+.artwork-card:hover .artwork-card-info {
+
+    transform:
+        translateZ(45px)
+        translateY(-5px);
+
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.artwork-card-info h2 {
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.6s cubic-bezier(.16,1,.3,1),
+        letter-spacing 0.4s ease;
+
+}
+
+.artwork-card:hover .artwork-card-info h2 {
+
+    transform:
+        translateZ(20px);
+
+    letter-spacing:
+        0.03em;
+
+}
+
+
+/* =========================================================
+   CARD 3D LIGHT
+   ========================================================= */
+
+.artwork-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255,255,255,.18) 45%,
+            rgba(255,255,255,.04) 55%,
+            transparent 75%
+        );
+
+    transform:
+        translateX(-120%)
+        skewX(-18deg);
+
+    transition:
+        transform 0.9s cubic-bezier(.2,.8,.2,1),
+        opacity 0.3s ease;
+
+}
+
+.artwork-card:hover::before {
+
+    opacity: 1;
+
+    transform:
+        translateX(120%)
+        skewX(-18deg);
+
+}
+
+
+/* =========================================================
+   3D EDGE
+   ========================================================= */
+
+.artwork-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 15;
+
+    pointer-events: none;
+
+    border-radius: inherit;
+
+    opacity: 0;
+
+    box-shadow:
+
+        inset 0 0 0 1px rgba(255,255,255,.12),
+
+        inset 0 0 35px rgba(255,255,255,.04);
+
+    transform:
+        translateZ(30px);
+
+    transition:
+        opacity 0.5s ease;
+
+}
+
+.artwork-card:hover::after {
+
+    opacity: 1;
+
+}
+
+
+/* =========================================================
+   ARTWORK ENTRANCE
+   ========================================================= */
+
+.artwork-card {
+
+    animation:
+        cardEnter
+        0.8s
+        cubic-bezier(.16,1,.3,1)
+        both;
+
+}
+
+
+/* =========================================================
+   STAGGER
+   ========================================================= */
+
+.artwork-card:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.artwork-card:nth-child(2) {
+    animation-delay: .10s;
+}
+
+.artwork-card:nth-child(3) {
+    animation-delay: .15s;
+}
+
+.artwork-card:nth-child(4) {
+    animation-delay: .20s;
+}
+
+.artwork-card:nth-child(5) {
+    animation-delay: .25s;
+}
+
+.artwork-card:nth-child(6) {
+    animation-delay: .30s;
+}
+
+.artwork-card:nth-child(7) {
+    animation-delay: .35s;
+}
+
+.artwork-card:nth-child(8) {
+    animation-delay: .40s;
+}
+
+.artwork-card:nth-child(9) {
+    animation-delay: .45s;
+}
+
+.artwork-card:nth-child(10) {
+    animation-delay: .50s;
+}
+
+.artwork-card:nth-child(11) {
+    animation-delay: .55s;
+}
+
+.artwork-card:nth-child(12) {
+    animation-delay: .60s;
+}
+
+
+@keyframes cardEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            perspective(1200px)
+            translateY(70px)
+            rotateX(20deg)
+            rotateY(-10deg)
+            scale(.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            perspective(1200px)
+            translateY(0)
+            rotateX(0)
+            rotateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   FILTER BUTTON 3D
+   ========================================================= */
+
+.filter-btn-container button {
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        box-shadow .35s ease;
+
+}
+
+.filter-btn-container button:hover {
+
+    transform:
+        perspective(500px)
+        rotateX(8deg)
+        translateY(-4px)
+        translateZ(8px)
+        scale(1.04);
+
+}
+
+
+/* =========================================================
+   SOCIAL ICON 3D
+   ========================================================= */
+
+.social-media a,
+.contact-social-links a {
+
+    display: inline-block;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform .45s cubic-bezier(.2,.8,.2,1);
+
+}
+
+.social-media a:hover,
+.contact-social-links a:hover {
+
+    transform:
+        perspective(600px)
+        rotateX(12deg)
+        rotateY(-18deg)
+        translateZ(15px)
+        translateY(-6px)
+        scale(1.1);
+
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+   ========================================================= */
+
+.contact-information,
+.contact-form-section,
+.commission-information {
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform .55s cubic-bezier(.2,.8,.2,1),
+        box-shadow .55s ease;
+
+}
+
+.contact-information:hover,
+.contact-form-section:hover,
+.commission-information:hover {
+
+    transform:
+        perspective(1000px)
+        rotateX(4deg)
+        translateZ(20px)
+        translateY(-8px);
+
+    box-shadow:
+        0 25px 45px rgba(0,0,0,.35);
+
+}
+
+
+/* =========================================================
+   FORM INPUTS
+   ========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    transform:
+        perspective(500px)
+        translateZ(8px)
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+#artwork-modal {
+
+    animation:
+        modalBackground
+        .35s
+        ease
+        both;
+
+}
+
+@keyframes modalBackground {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+#artwork-modal .modal-content {
+
+    transform-style: preserve-3d;
+
+    animation:
+        modal3DOpen
+        .65s
+        cubic-bezier(.16,1,.3,1)
+        both;
+
+}
+
+@keyframes modal3DOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            perspective(1200px)
+            translateY(60px)
+            rotateX(20deg)
+            rotateY(-8deg)
+            scale(.85);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            perspective(1200px)
+            translateY(0)
+            rotateX(0)
+            rotateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   MODAL CLOSE BUTTON
+   ========================================================= */
+
+[data-close-modal] {
+
+    transition:
+        transform .4s cubic-bezier(.2,.8,.2,1);
+
+}
+
+[data-close-modal]:hover {
+
+    transform:
+        rotateZ(90deg)
+        rotateY(20deg)
+        scale(1.12);
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /*
+       Reduce 3D movement on touch screens.
+       Phones don't have a real hover interaction.
+    */
+
+    .artwork-card:hover {
+
+        transform:
+            perspective(900px)
+            translateY(-8px)
+            translateZ(15px)
+            scale(1.025);
+
+    }
+
+    .artwork-card:nth-child(even):hover {
+
+        transform:
+            perspective(900px)
+            translateY(-8px)
+            translateZ(15px)
+            scale(1.025);
+
+    }
+
+    .artwork-card:hover img {
+
+        transform:
+            translateZ(20px)
+            scale(1.06);
+
+    }
+
+    .artwork-card:hover .artwork-card-info {
+
+        transform:
+            translateZ(10px);
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .artwork-card:hover {
+
+        transform:
+            translateY(-5px)
+            scale(1.015);
+
+    }
+
+    .artwork-card:hover img {
+
+        transform:
+            scale(1.04);
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+
+    }
+
+    .artwork-card:hover,
+    .artwork-card:nth-child(even):hover,
+    .artwork-card:hover img,
+    .artwork-card:hover .artwork-card-info {
+
+        transform: none !important;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   AZART — 3D AVATAR EFFECT
+   Pure CSS
+   ========================================================= */
+
+.avatar-container {
+    perspective: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Avatar image */
+.avatar-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
+    display: block;
+
+    transform-style: preserve-3d;
+    transform:
+        perspective(1200px)
+        rotateX(0deg)
+        rotateY(0deg)
+        rotateZ(0deg)
+        translateZ(0)
+        scale(1);
+
+    transition:
+        transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+        filter 0.6s ease;
+
+    will-change: transform;
+
+    /* subtle depth */
+    filter:
+        drop-shadow(0 25px 25px rgba(0, 0, 0, 0.45));
+}
+
+/* =========================================================
+   HOVER — 3D TILT
+   ========================================================= */
+
+.avatar-container:hover img {
+    transform:
+        perspective(1200px)
+        rotateX(7deg)
+        rotateY(-10deg)
+        rotateZ(1deg)
+        translateZ(35px)
+        scale(1.06);
+
+    filter:
+        drop-shadow(25px 30px 35px rgba(0, 0, 0, 0.65));
+}
+
+
+/* =========================================================
+   MOVING LIGHT / DEPTH EFFECT
+   ========================================================= */
+
+.avatar-container {
+    position: relative;
+}
+
+.avatar-container::after {
+    content: "";
+    position: absolute;
+
+    width: 70%;
+    height: 20%;
+
+    left: 15%;
+    bottom: -15px;
+
+    background: rgba(198, 40, 40, 0.15);
+
+    filter: blur(25px);
+
+    border-radius: 50%;
+
+    transform: scale(0.8);
+    transition: 
+        transform 0.6s ease,
+        opacity 0.6s ease;
+
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+.avatar-container:hover::after {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   MOBILE
+   Don't make the avatar tilt aggressively on touch devices
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .avatar-container img {
+        transform:
+            perspective(1000px)
+            rotateX(0deg)
+            rotateY(0deg)
+            translateZ(0)
+            scale(1);
+    }
+
+    .avatar-container:hover img {
+        transform:
+            perspective(1000px)
+            rotateX(3deg)
+            rotateY(-5deg)
+            translateZ(15px)
+            scale(1.025);
+    }
+}
+
+
+/* =========================================================
+   AZART — 404 PAGE ANIMATIONS
+   Pure CSS
+   ========================================================= */
+
+
+/* =========================================================
+   404 PAGE ENTRANCE
+   ========================================================= */
+
+.error-content {
+    animation: errorCardEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+
+@keyframes errorCardEnter {
+
+    0% {
+        opacity: 0;
+        transform:
+            perspective(1000px)
+            translateY(60px)
+            rotateX(10deg)
+            scale(0.94);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            perspective(1000px)
+            translateY(0)
+            rotateX(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   404 CARD — 3D HOVER
+   ========================================================= */
+
+.error-content {
+    transform-style: preserve-3d;
+    transition:
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.error-content:hover {
+
+    transform:
+        perspective(1200px)
+        rotateX(3deg)
+        rotateY(-3deg)
+        translateY(-6px)
+        scale(1.01);
+
+    border-color: rgba(198, 40, 40, 0.55);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.6),
+        0 0 35px rgba(198, 40, 40, 0.08);
+}
+
+
+/* =========================================================
+   404 NUMBER
+   ========================================================= */
+
+.error-code {
+
+    transform-style: preserve-3d;
+
+    animation:
+        errorCodeEnter 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both,
+        errorCodeFloat 5s ease-in-out 1.2s infinite;
+
+    text-shadow:
+        0 0 10px rgba(198, 40, 40, 0.15);
+}
+
+
+@keyframes errorCodeEnter {
+
+    0% {
+        opacity: 0;
+        transform:
+            perspective(800px)
+            translateZ(-120px)
+            rotateX(35deg)
+            scale(0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            perspective(800px)
+            translateZ(0)
+            rotateX(0)
+            scale(1);
+    }
+}
+
+
+@keyframes errorCodeFloat {
+
+    0%,
+    100% {
+        transform:
+            perspective(800px)
+            translateY(0)
+            rotateX(0deg);
+    }
+
+    50% {
+        transform:
+            perspective(800px)
+            translateY(-8px)
+            rotateX(2deg);
+    }
+}
+
+
+/* =========================================================
+   ERROR HEADING
+   ========================================================= */
+
+.error-content h1 {
+
+    animation:
+        errorTextEnter 0.7s ease 0.35s both;
+}
+
+
+@keyframes errorTextEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.error-description {
+
+    animation:
+        errorTextEnter 0.7s ease 0.5s both;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+   ========================================================= */
+
+.error-actions {
+
+    animation:
+        errorTextEnter 0.7s ease 0.65s both;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.error-actions .cta {
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.error-actions .cta:hover {
+
+    transform:
+        perspective(600px)
+        translateY(-5px)
+        translateZ(8px)
+        rotateX(2deg);
+
+    box-shadow:
+        0 12px 25px rgba(198, 40, 40, 0.25);
+}
+
+
+.error-actions .cta:active {
+
+    transform:
+        perspective(600px)
+        translateY(-1px)
+        scale(0.98);
+}
+
+
+/* =========================================================
+   SECONDARY LINK
+   ========================================================= */
+
+.error-secondary-link {
+
+    position: relative;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.error-secondary-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 0;
+    height: 1px;
+
+    background-color: var(--border-accent-hover);
+
+    transition: width 0.35s ease;
+}
+
+
+.error-secondary-link:hover {
+
+    color: var(--border-accent-hover);
+
+    transform: translateY(-3px);
+}
+
+
+.error-secondary-link:hover::after {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   CARD RED EDGE LIGHT
+   ========================================================= */
+
+.error-content::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 35%,
+            rgba(198, 40, 40, 0.08),
+            transparent 65%
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+
+.error-content:hover::before {
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   3D DEPTH
+   ========================================================= */
+
+.error-code,
+.error-content h1,
+.error-description,
+.error-actions {
+
+    transform-style: preserve-3d;
+}
+
+
+/* =========================================================
+   PAGE LOAD DELAY
+   ========================================================= */
+
+.error-code {
+    animation-delay: 0.1s, 1.2s;
+}
+
+
+/* =========================================================
+   RED PULSE
+   ========================================================= */
+
+.error-code {
+
+    animation-name:
+        errorCodeEnter,
+        errorCodeFloat,
+        errorCodeGlow;
+
+    animation-duration:
+        1s,
+        5s,
+        4s;
+
+    animation-delay:
+        0.15s,
+        1.2s,
+        1.2s;
+
+    animation-timing-function:
+        cubic-bezier(0.16, 1, 0.3, 1),
+        ease-in-out,
+        ease-in-out;
+
+    animation-iteration-count:
+        1,
+        infinite,
+        infinite;
+}
+
+
+@keyframes errorCodeGlow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 8px rgba(198, 40, 40, 0.1);
+    }
+
+    50% {
+        text-shadow:
+            0 0 20px rgba(198, 40, 40, 0.28);
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .error-content,
+    .error-code,
+    .error-content h1,
+    .error-description,
+    .error-actions {
+
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .error-content:hover,
+    .error-actions .cta:hover,
+    .error-secondary-link:hover {
+
+        transform: none !important;
+    }
+}
+
+
+

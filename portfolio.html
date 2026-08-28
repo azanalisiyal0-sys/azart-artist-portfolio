@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Azart | Portfolio</title>
+
+    <meta name="description"
+        content="AZART — Artist portfolio showcasing artwork, creative projects, and visual expression.">
+    <meta name="author" content="AZART">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="AZART — Artist Portfolio">
+    <meta property="og:description"
+        content="Explore AZART's artwork, creative projects, and visual work.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://azanalisiyal0-sys.github.io/azart-artist-portfolio/assets/images/logo-bg.png">
+    <meta property="og:url" content="https://azanalisiyal0-sys.github.io/azart-artist-portfolio/portfolio.html">
+    <meta property="og:site_name" content="AZART">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- PNG Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="assets/favicon/favicon-16x16.png">
+
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="assets/favicon/favicon-32x32.png">
+
+    <!-- Apple / iOS -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="assets/favicon/apple-touch-icon.png">
+
+    <!-- Android -->
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="assets/favicon/android-chrome-192x192.png">
+
+    <link rel="icon" type="image/png" sizes="512x512"
+        href="assets/favicon/android-chrome-512x512.png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+        <header>
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="assets/images/logo.png"
+                alt="Azart"
+            >
+
+        </a>
+
+    </div>
+
+
+    <!-- Desktop Navigation -->
+
+    <nav class="nav">
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Mobile Menu Button -->
+
+    <button
+        class="mobile-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+
+    <!-- Mobile Navigation -->
+
+    <nav class="mobile-menu">
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    </header>
+
+
+    <main class="portfolio-hero">
+
+        <h1>My Work</h1>
+
+        <h3>A collection of ideas, characters, and moments I've brought to life</h3>
+
+        <p>
+            Explore my artwork across different styles
+            and subjects. Some pieces are studies, some
+            are experiments, and others are aerworks I've
+            created simply cause I wanted to see an idea
+            become real.
+        </p>
+
+    </main>
+
+
+    <div class="portfolio-controls">
+
+        <div class="search-container">
+
+            <input
+                id="search-input"
+                type="text"
+                placeholder="Search"
+                autocomplete="off">
+
+        </div>
+
+        <div class="filter-btn-container">
+
+            <!-- Category filter buttons can be added here -->
+
+        </div>
+
+    </div>
+
+
+    <!-- Artwork Grid -->
+    <div id="artwork-grid" class="artwork-grid">
+    </div>
+
+
+    <!-- Artwork Modal -->
+    <div
+        id="artwork-modal"
+        class="modal-container"
+        role="dialog"
+        aria-modal="true">
+
+        <div class="modal-content">
+
+            <button
+                type="button"
+                data-close-modal
+                aria-label="Close artwork">
+                ×
+            </button>
+
+            <img
+                data-modal-image
+                src=""
+                alt="">
+
+            <div class="modal-info">
+
+                <h2 data-modal-title></h2>
+
+                <p data-modal-category></p>
+
+                <p data-modal-year></p>
+
+                <p data-modal-description></p>
+
+                <p data-modal-software></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer class="site-footer">
+
+    <div class="footer-main container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                <img
+                    src="assets/images/logo.png"
+                    alt="Azart"
+                >
+            </a>
+
+            <p>
+                Digital artist & illustrator creating artwork,
+                characters, portraits, and visual ideas.
+            </p>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <div class="footer-column">
+
+            <h3>Explore</h3>
+
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <!-- Social -->
+        <div class="footer-column">
+
+            <h3>Connect</h3>
+
+            <ul class="footer-social-links">
+
+                <li>
+                    <a
+                        href="https://www.pinterest.com/CaptainK2_08/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Pinterest
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://github.com/azanalisiyal0-sys"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.instagram.com/azart.store_official/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=azanalisiyal0@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Email"
+                    >
+                        Email
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CTA -->
+        <div class="footer-contact">
+
+            <h3>Have an idea?</h3>
+
+            <p>
+                Have a project, character, portrait, or
+                creative idea in mind?
+            </p>
+
+            <a href="contact.html" class="footer-cta">
+                Start a conversation
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                &copy;
+                <span data-current-year>2026</span>
+                Azart. All rights reserved.
+            </p>
+
+            <p>
+                Digital Artist & Illustrator
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/artworks.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/ui.js"></script>
+
+</body>
+</html>

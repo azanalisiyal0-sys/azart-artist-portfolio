@@ -1,0 +1,2184 @@
+/* =========================================================
+   RESPONSIVE CSS
+   AZART — Artist Portfolio
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1400px and above
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .container {
+        width: min(1200px, 90%);
+        margin: 0 auto;
+    }
+
+    /* Portfolio */
+
+    #artwork-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .portfolio-hero {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+   1024px — 1399px
+   ========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1399px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Header */
+
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Portfolio */
+
+    #artwork-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   768px — 1023px
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    header {
+        padding: 20px 5%;
+    }
+
+    .logo img {
+        max-width: 130px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .hero h3 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        max-width: 700px;
+    }
+
+
+    /* -----------------------------------------------------
+       PORTFOLIO
+       ----------------------------------------------------- */
+
+    .portfolio-hero {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .portfolio-controls {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    #search-input {
+        width: 100%;
+    }
+
+    .filter-btn-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    /* Artwork Grid */
+
+    #artwork-grid {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL
+       ----------------------------------------------------- */
+
+    #artwork-modal {
+        padding: 25px;
+    }
+
+    #artwork-modal .modal-content {
+        width: 90%;
+        max-height: 90vh;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   480px — 767px
+   ========================================================= */
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+    .container {
+        width: 92%;
+        margin: 0 auto;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    header {
+        padding: 16px 4%;
+    }
+
+    .logo img {
+        max-width: 115px;
+    }
+
+    /*
+       If your mobile navigation uses
+       .mobile-toggle and .mobile-menu,
+       those elements can be controlled here.
+    */
+
+    nav.nav {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero {
+        width: 92%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.15;
+    }
+
+    .hero h3 {
+        font-size: 1rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+
+    /* -----------------------------------------------------
+       INDEX FEATURED IMAGES
+       ----------------------------------------------------- */
+
+    .index-hero-images {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       CATEGORIES
+       ----------------------------------------------------- */
+
+    .categories {
+        width: 92%;
+    }
+
+    .categories h1 {
+        font-size: 2rem;
+    }
+
+    .categories h2 {
+        font-size: 1.2rem;
+    }
+
+
+    /* -----------------------------------------------------
+       SERVICES
+       ----------------------------------------------------- */
+
+    .services-preview {
+        width: 92%;
+    }
+
+    .services-preview h1 {
+        font-size: 2rem;
+    }
+
+
+    /* -----------------------------------------------------
+       PORTFOLIO
+       ----------------------------------------------------- */
+
+    .portfolio-hero {
+        width: 92%;
+        margin: 0 auto;
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .portfolio-hero h3 {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .portfolio-hero p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+
+    /* Portfolio Controls */
+
+    .portfolio-controls {
+        width: 92%;
+        margin: 0 auto 30px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    #search-input {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.95rem;
+    }
+
+    .filter-btn-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+
+    /* Artwork Grid */
+
+    #artwork-grid {
+        width: 92%;
+        margin: 0 auto;
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .artwork-card-info h2 {
+        font-size: 0.9rem;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL
+       ----------------------------------------------------- */
+
+    #artwork-modal {
+        padding: 15px;
+    }
+
+    #artwork-modal .modal-content {
+        width: 95%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    [data-modal-title] {
+        font-size: 1.4rem;
+    }
+
+    [data-modal-description] {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    footer {
+        padding: 35px 5%;
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   350px — 479px
+   ========================================================= */
+
+@media (max-width: 479px) {
+
+    .container {
+        width: 94%;
+        margin: 0 auto;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    header {
+        padding: 14px 3%;
+    }
+
+    .logo img {
+        max-width: 105px;
+    }
+
+    nav.nav {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE MENU
+       ----------------------------------------------------- */
+
+    .mobile-menu {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .mobile-menu a {
+        font-size: 0.95rem;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero {
+        width: 94%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .hero h3 {
+        font-size: 0.95rem;
+    }
+
+    .hero p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+
+    /* Buttons */
+
+    .hero button,
+    .hero .cta,
+    .services-preview button {
+        width: 100%;
+        padding: 13px 18px;
+    }
+
+
+    /* -----------------------------------------------------
+       FEATURED IMAGES
+       ----------------------------------------------------- */
+
+    .index-hero-images {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       CATEGORIES
+       ----------------------------------------------------- */
+
+    .categories {
+        width: 94%;
+    }
+
+    .categories h1 {
+        font-size: 1.7rem;
+    }
+
+    .categories h2 {
+        font-size: 1.1rem;
+    }
+
+    .categories h3 {
+        font-size: 1rem;
+    }
+
+    .categories p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+
+    /* -----------------------------------------------------
+       SERVICES
+       ----------------------------------------------------- */
+
+    .services-preview {
+        width: 94%;
+    }
+
+    .services-preview h1 {
+        font-size: 1.7rem;
+    }
+
+    .services-preview p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+
+    /* -----------------------------------------------------
+       PORTFOLIO
+       ----------------------------------------------------- */
+
+    .portfolio-hero {
+        width: 94%;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-hero h3 {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .portfolio-hero p {
+        font-size: 0.85rem;
+        line-height: 1.65;
+    }
+
+
+    /* -----------------------------------------------------
+       SEARCH
+       ----------------------------------------------------- */
+
+    .portfolio-controls {
+        width: 94%;
+        margin: 0 auto 25px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    #search-input {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 12px;
+
+        font-size: 0.9rem;
+    }
+
+
+    /* -----------------------------------------------------
+       FILTERS
+       ----------------------------------------------------- */
+
+    .filter-btn-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    .filter-btn-container button {
+        font-size: 0.78rem;
+        padding: 8px 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       ARTWORK GRID
+       ----------------------------------------------------- */
+
+    #artwork-grid {
+        width: 94%;
+        margin: 0 auto;
+
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .artwork-card-info h2 {
+        font-size: 0.95rem;
+    }
+
+
+    /* -----------------------------------------------------
+       NO RESULTS
+       ----------------------------------------------------- */
+
+    .no-results {
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .no-results h2 {
+        font-size: 1.3rem;
+    }
+
+    .no-results p {
+        font-size: 0.85rem;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL
+       ----------------------------------------------------- */
+
+    #artwork-modal {
+        padding: 10px;
+    }
+
+    #artwork-modal .modal-content {
+        width: 96%;
+        max-height: 92vh;
+        overflow-y: auto;
+    }
+
+    [data-modal-title] {
+        font-size: 1.25rem;
+    }
+
+    [data-modal-category],
+    [data-modal-year],
+    [data-modal-software] {
+        font-size: 0.8rem;
+    }
+
+    [data-modal-description] {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+
+    /* Modal buttons */
+
+    [data-close-modal] {
+        font-size: 0.85rem;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    footer {
+        padding: 30px 4%;
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .social-media img {
+        width: 25px;
+        height: 25px;
+    }
+
+    footer p {
+        font-size: 0.75rem;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   Below 350px
+   ========================================================= */
+
+@media (max-width: 349px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    #artwork-grid {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .filter-btn-container {
+        gap: 5px;
+    }
+
+    .filter-btn-container button {
+        width: 100%;
+    }
+
+}
+
+
+
+
+/* Fixed Navigation */
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1023px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+
+    /* Portfolio */
+
+    #artwork-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+    header {
+        padding: 15px 4%;
+    }
+
+
+    .logo img {
+        max-width: 120px;
+    }
+
+
+    /* Mobile menu */
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        width: 92%;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+
+    /* Portfolio */
+
+    .portfolio-hero {
+        width: 92%;
+        margin: 0 auto;
+    }
+
+
+    .portfolio-controls {
+        width: 92%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 15px;
+    }
+
+
+    #search-input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    .filter-btn-container {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+
+
+    #artwork-grid {
+        width: 92%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    /* Modal */
+
+    .artwork-modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 95%;
+
+        padding: 15px;
+
+        max-height: 92vh;
+    }
+
+    .modal-image-container img {
+        max-height: 55vh;
+    }
+
+
+    /* Footer */
+
+    footer {
+        text-align: center;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .logo img {
+        max-width: 105px;
+    }
+
+
+    .mobile-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+
+    #artwork-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .portfolio-hero h1 {
+        font-size: 1.8rem;
+    }
+
+
+    .modal-navigation {
+        gap: 8px;
+    }
+
+    .modal-navigation button {
+        padding: 8px 12px;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   AZART — CONTACT PAGE RESPONSIVE
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   768px — 1023px
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+    /* Main contact page */
+    .contact-page {
+        width: 90%;
+        max-width: 1100px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-top: 70px;
+        padding-bottom: 80px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Hero */
+    .contact-hero {
+        width: 100%;
+        max-width: 750px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-bottom: 65px;
+    }
+
+    .contact-hero h1 {
+        font-size: clamp(2.2rem, 5vw, 3rem);
+    }
+
+
+    /* Contact columns → single column */
+    .contact-main {
+        width: 100%;
+        max-width: 850px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* Contact cards */
+    .contact-information,
+    .contact-form-section {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 35px;
+    }
+
+
+    /* Commission section */
+    .commission-information {
+        width: 100%;
+        max-width: 850px;
+
+        box-sizing: border-box;
+
+        margin: 70px auto 0;
+
+        padding: 40px 35px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   480px — 767px
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Page */
+    .contact-page {
+        width: 92%;
+        max-width: none;
+
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .contact-hero {
+        width: 100%;
+        margin-bottom: 50px;
+
+        text-align: center;
+    }
+
+    .contact-hero h1 {
+        max-width: 100%;
+
+        font-size: 2rem;
+        line-height: 1.15;
+
+        margin-bottom: 20px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .contact-hero h3 {
+        font-size: 1rem;
+        line-height: 1.5;
+
+        margin-bottom: 16px;
+    }
+
+    .contact-hero p {
+        width: 100%;
+
+        font-size: 0.9rem;
+        line-height: 1.7;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =====================================================
+       CONTACT MAIN
+       ===================================================== */
+
+    .contact-main {
+        width: 100%;
+        max-width: none;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    /* =====================================================
+       CONTACT CARDS
+       ===================================================== */
+
+    .contact-information,
+    .contact-form-section {
+
+        width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        padding: 25px 20px;
+    }
+
+
+    .contact-information h1,
+    .contact-form-section h1 {
+        max-width: 100%;
+
+        font-size: 1.4rem;
+        line-height: 1.25;
+
+        margin-bottom: 20px;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =====================================================
+       CONTACT DETAILS
+       ===================================================== */
+
+    .contact-detail {
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+
+    .contact-detail h3 {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .contact-detail p {
+        font-size: 0.88rem;
+        line-height: 1.7;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* Email */
+    .contact-email-link {
+        max-width: 100%;
+
+        font-size: 0.85rem;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* =====================================================
+       SOCIAL LINKS
+       ===================================================== */
+
+    .contact-social-links {
+        width: 100%;
+        max-width: 100%;
+
+        gap: 8px;
+    }
+
+    .contact-social-links a {
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* =====================================================
+       FORM
+       ===================================================== */
+
+    .contact-form-section > p {
+        font-size: 0.88rem;
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .contact-form {
+        width: 100%;
+        min-width: 0;
+
+        gap: 16px;
+    }
+
+    .form-group {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+
+    /* Inputs */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        padding: 12px;
+
+        font-size: 0.88rem;
+    }
+
+
+    .form-group input,
+    .form-group select {
+        min-height: 46px;
+    }
+
+
+    .form-group textarea {
+        min-height: 160px;
+
+        resize: vertical;
+    }
+
+
+    /* Submit */
+    .contact-submit {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 13px 16px;
+
+        font-size: 0.85rem;
+    }
+
+
+    /* =====================================================
+       SUCCESS MESSAGE
+       ===================================================== */
+
+    .contact-success {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 16px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .contact-success p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       COMMISSION INFORMATION
+       ===================================================== */
+
+    .commission-information {
+        width: 100%;
+        max-width: none;
+
+        box-sizing: border-box;
+
+        margin: 55px auto 0;
+
+        padding: 30px 20px;
+    }
+
+    .commission-information h1 {
+        max-width: 100%;
+
+        font-size: 1.4rem;
+        line-height: 1.25;
+
+        margin-bottom: 20px;
+
+        overflow-wrap: anywhere;
+    }
+
+    .commission-information h3 {
+        font-size: 0.9rem;
+        line-height: 1.4;
+
+        margin-top: 28px;
+        margin-bottom: 10px;
+    }
+
+    .commission-information p {
+        font-size: 0.85rem;
+        line-height: 1.7;
+
+        overflow-wrap: anywhere;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   350px — 479px
+   ========================================================= */
+
+@media (max-width: 479px) {
+
+    .contact-page {
+        width: 94%;
+
+        padding-top: 40px;
+        padding-bottom: 55px;
+    }
+
+
+    /* Hero */
+    .contact-hero {
+        margin-bottom: 40px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.7rem;
+        line-height: 1.15;
+
+        margin-bottom: 16px;
+    }
+
+    .contact-hero h3 {
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+
+    .contact-hero p {
+        font-size: 0.82rem;
+        line-height: 1.65;
+    }
+
+
+    /* Main */
+    .contact-main {
+        gap: 16px;
+    }
+
+
+    /* Cards */
+    .contact-information,
+    .contact-form-section {
+        padding: 20px 15px;
+    }
+
+
+    .contact-information h1,
+    .contact-form-section h1 {
+        font-size: 1.25rem;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* Details */
+    .contact-detail {
+        padding-top: 18px;
+        margin-top: 18px;
+    }
+
+    .contact-detail h3 {
+        font-size: 0.88rem;
+    }
+
+    .contact-detail p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+
+    /* Email */
+    .contact-email-link {
+        font-size: 0.78rem;
+    }
+
+
+    /* Social */
+    .contact-social-links {
+        gap: 7px;
+    }
+
+    .contact-social-links a {
+        width: 100%;
+
+        padding: 10px 12px;
+
+        font-size: 0.78rem;
+    }
+
+
+    /* Form */
+    .contact-form-section > p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        gap: 14px;
+    }
+
+    .form-group {
+        gap: 6px;
+    }
+
+    .form-group label {
+        font-size: 0.78rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 11px;
+
+        font-size: 0.8rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        min-height: 44px;
+    }
+
+    .form-group textarea {
+        min-height: 140px;
+    }
+
+
+    /* Submit */
+    .contact-submit {
+        padding: 12px;
+
+        font-size: 0.8rem;
+    }
+
+
+    /* Commission */
+    .commission-information {
+        margin-top: 45px;
+
+        padding: 25px 15px;
+    }
+
+    .commission-information h1 {
+        font-size: 1.25rem;
+    }
+
+    .commission-information h3 {
+        font-size: 0.85rem;
+
+        margin-top: 25px;
+    }
+
+    .commission-information p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   Below 350px
+   ========================================================= */
+
+@media (max-width: 349px) {
+
+    .contact-page {
+        width: 95%;
+
+        padding-top: 35px;
+        padding-bottom: 45px;
+    }
+
+
+    /* Hero */
+    .contact-hero {
+        margin-bottom: 32px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-hero h3 {
+        font-size: 0.82rem;
+    }
+
+    .contact-hero p {
+        font-size: 0.76rem;
+    }
+
+
+    /* Cards */
+    .contact-information,
+    .contact-form-section {
+        padding: 18px 12px;
+    }
+
+
+    .contact-information h1,
+    .contact-form-section h1 {
+        font-size: 1.15rem;
+    }
+
+
+    /* Details */
+    .contact-detail p {
+        font-size: 0.75rem;
+    }
+
+    .contact-email-link {
+        font-size: 0.72rem;
+    }
+
+
+    /* Form */
+    .form-group label {
+        font-size: 0.74rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+
+        font-size: 0.76rem;
+    }
+
+    .form-group textarea {
+        min-height: 125px;
+    }
+
+
+    /* Commission */
+    .commission-information {
+        padding: 22px 12px;
+
+        margin-top: 38px;
+    }
+
+    .commission-information h1 {
+        font-size: 1.15rem;
+    }
+
+    .commission-information h3 {
+        font-size: 0.8rem;
+    }
+
+    .commission-information p {
+        font-size: 0.74rem;
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   RESPONSIVE TYPOGRAPHY
+   ========================================================= */
+
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+
+    h2 {
+        font-size: clamp(1.7rem, 4vw, 2.4rem);
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 7vw, 4.5rem);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 2.3rem;
+
+        line-height: 1.15;
+
+        margin-bottom: 18px;
+    }
+
+
+    h2 {
+        font-size: 1.8rem;
+
+        line-height: 1.2;
+    }
+
+
+    h3 {
+        font-size: 1.1rem;
+
+        line-height: 1.4;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(2.4rem, 10vw, 3.4rem);
+
+        line-height: 1.08;
+    }
+
+
+    .categories h1,
+    .services-preview h1,
+    .about-the-artist h1,
+    .more-about-me h1,
+    .how-i-approach h1,
+    .skills h1,
+    .tools h1,
+    .promise-to-become-better h1 {
+        font-size: 2.1rem;
+
+        padding-bottom: 8px;
+    }
+
+
+    p {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* Small phones */
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+
+    h3 {
+        font-size: 1rem;
+    }
+
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 900px) {
+    .logo img {
+        width: 165px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        width: 145px;
+    }
+}
+
+
+
+/* =========================================================
+   AZART — CONTACT MOBILE OVERFLOW FIX
+   MUST BE AT THE VERY END OF responsive.css
+
+   NOTE: selectors below are prefixed with "body" purely to
+   raise specificity above anything in style.css / animations.css
+   that might target these same classes (including other
+   !important rules that load after this file). This does not
+   change what the rules do — only how likely they are to win
+   the cascade.
+   ========================================================= */
+
+/* Prevent every element from creating accidental horizontal width */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Contact page itself */
+body .contact-page {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTACT MAIN — FORCE ONE COLUMN
+   ========================================================= */
+
+body .contact-main {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: grid !important;
+
+    /* THIS is the important part */
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTACT CONTAINERS
+   ========================================================= */
+
+body .contact-information,
+body .contact-form-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    box-sizing: border-box;
+
+    grid-column: 1 / -1 !important;
+}
+
+/* Prevent content inside the cards from forcing width */
+body .contact-information *,
+body .contact-form-section * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+body .contact-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    box-sizing: border-box;
+}
+
+body .form-group {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+body .form-group input,
+body .form-group select,
+body .form-group textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    body .contact-page {
+        width: 92% !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body .contact-main {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+
+        gap: 20px;
+    }
+
+    body .contact-information,
+    body .contact-form-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-column: 1 !important;
+
+        padding: 25px 20px;
+    }
+
+    body .contact-form {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    body .form-group input,
+    body .form-group select,
+    body .form-group textarea {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 479px) {
+
+    body .contact-page {
+        width: 94% !important;
+    }
+
+    body .contact-main {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 16px;
+    }
+
+    body .contact-information,
+    body .contact-form-section {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        grid-column: 1 !important;
+
+        padding: 20px 15px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL
+   ========================================================= */
+
+@media (max-width: 349px) {
+
+    body .contact-page {
+        width: 95% !important;
+    }
+
+    body .contact-main {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    body .contact-information,
+    body .contact-form-section {
+        min-width: 0 !important;
+        padding: 18px 12px;
+    }
+}
+
+
+/* =========================================================
+   AZART — 404 PAGE RESPONSIVE
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+    .error-page {
+        min-height: calc(100vh - 160px);
+        padding: 70px 20px;
+    }
+
+    .error-content {
+        max-width: 680px;
+        padding: 55px 35px;
+    }
+
+    .error-code {
+        font-size: clamp(5rem, 16vw, 9rem);
+    }
+
+    .error-content h1 {
+        font-size: clamp(1.7rem, 4vw, 2.6rem);
+    }
+
+    .error-description {
+        max-width: 560px;
+        font-size: 0.95rem;
+    }
+
+    .error-actions {
+        gap: 20px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .error-page {
+        min-height: calc(100vh - 130px);
+        padding: 50px 16px;
+    }
+
+    .error-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 45px 22px;
+        border-radius: 10px;
+    }
+
+    .error-code {
+        font-size: clamp(5rem, 25vw, 8rem);
+        letter-spacing: -3px;
+    }
+
+    .error-content h1 {
+        margin-top: 24px;
+        font-size: clamp(1.5rem, 7vw, 2.2rem);
+    }
+
+    .error-description {
+        max-width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .error-actions {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .error-actions .cta,
+    .error-secondary-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .error-secondary-link {
+        padding: 11px 16px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .error-page {
+        padding: 35px 12px;
+    }
+
+    .error-content {
+        padding: 40px 18px;
+    }
+
+    .error-code {
+        font-size: clamp(4.5rem, 27vw, 7rem);
+        letter-spacing: -2px;
+    }
+
+    .error-content h1 {
+        margin: 22px 0 14px;
+        font-size: 1.45rem;
+    }
+
+    .error-description {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+    .error-actions {
+        margin-top: 28px;
+    }
+
+    .error-actions .cta,
+    .error-secondary-link {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 349px) {
+
+    .error-page {
+        padding: 25px 10px;
+    }
+
+    .error-content {
+        padding: 32px 14px;
+    }
+
+    .error-code {
+        font-size: 4.2rem;
+    }
+
+    .error-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .error-description {
+        font-size: 0.82rem;
+    }
+
+    .error-actions {
+        gap: 12px;
+    }
+}
+
+
+
+/* =========================================================
+   FOOTER RESPONSIVE FIX
+   ========================================================= */
+
+/* Tablet */
+@media (max-width: 767px) {
+
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-brand,
+    .footer-contact {
+        max-width: 100%;
+    }
+
+    .footer-brand p,
+    .footer-contact p {
+        max-width: 100%;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .site-footer {
+        margin-top: 70px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .footer-main {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .footer-brand,
+    .footer-column,
+    .footer-contact {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .footer-logo img {
+        width: 130px;
+    }
+
+    .footer-brand p,
+    .footer-contact p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .footer-column h3,
+    .footer-contact h3 {
+        margin-bottom: 15px;
+    }
+
+    .footer-column li {
+        margin-bottom: 10px;
+    }
+
+    .footer-column a,
+    .footer-contact p,
+    .footer-brand p {
+        font-size: 0.85rem;
+    }
+
+    .footer-cta {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-bottom .container {
+        width: 92%;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .footer-bottom p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 349px) {
+
+    .footer-main {
+        gap: 30px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .footer-brand p,
+    .footer-contact p,
+    .footer-column a {
+        font-size: 0.82rem;
+    }
+}

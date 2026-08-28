@@ -1,0 +1,2745 @@
+/* =========================================================
+   AZART — MAIN STYLESHEET
+   No animations
+   No responsive rules
+   ========================================================= */
+
+
+/* =========================================================
+   1. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+
+    /* BACKGROUND */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #121212;
+    --bg-card: #181818;
+
+    /* TEXT */
+    --text-primary: #f2f2f0;
+    --text-secondary: #9a9a9a;
+
+    /* BORDER */
+    --border-color: #292929;
+    --border-accent: #c62828;
+    --border-accent-hover: #e53935;
+
+    /* EFFECTS */
+    --shadow-card: rgba(0, 0, 0, 0.45);
+
+    /* TYPOGRAPHY */
+    --font-heading: "Sora", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* =========================================================
+   3. GLOBAL TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-weight: 700;
+    line-height: 1.08;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 650;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+}
+
+h3 {
+    font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--text-secondary);
+    max-width: 750px;
+    line-height: 1.8;
+}
+
+::selection {
+    background-color: var(--border-accent);
+    color: var(--text-primary);
+}
+
+
+/* =========================================================
+   4. CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(1200px, 90%);
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   5. HEADER
+   ========================================================= */
+
+header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.25rem 5%;
+
+    background-color: var(--bg-primary);
+
+    border-bottom: 1px solid var(--border-color);
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* =========================================================
+   6. LOGO
+   ========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 190px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================================
+   7. DESKTOP NAVIGATION
+   ========================================================= */
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav a {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 0.4rem 0;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: var(--text-primary);
+}
+
+.nav a.active {
+    color: var(--text-primary);
+}
+
+.nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -4px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--border-accent);
+}
+
+
+/* =========================================================
+   9. HERO — HOME
+   ========================================================= */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.hero h1:first-child {
+    max-width: 550px;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+    letter-spacing: -0.04em;
+}
+
+.hero h3 {
+    margin-top: 1rem;
+}
+
+.hero p {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   10. CTA
+   ========================================================= */
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    padding: 0.8rem 1.5rem;
+
+    border: 1px solid var(--border-accent);
+    border-radius: 6px;
+
+    background-color: var(--border-accent);
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.cta:hover {
+    background-color: var(--border-accent-hover);
+    border-color: var(--border-accent-hover);
+}
+
+
+/* =========================================================
+   11. FEATURED VISUALS
+   ========================================================= */
+
+.index-hero-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.index-hero-images img {
+    width: 100%;
+    height: 360px;
+
+    object-fit: cover;
+
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    background-color: var(--bg-card);
+}
+
+
+/* =========================================================
+   12. CATEGORIES
+   ========================================================= */
+
+.categories {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    border-top: 1px solid var(--border-color);
+}
+
+.categories h1 {
+    margin-bottom: 0.5rem;
+}
+
+.categories h2 {
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.categories h3 {
+    color: var(--text-primary);
+
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.categories p {
+    max-width: 700px;
+}
+
+
+/* =========================================================
+   13. SERVICES PREVIEW
+   ========================================================= */
+
+.services-preview {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    border-top: 1px solid var(--border-color);
+}
+
+.services-preview h1 {
+    max-width: 700px;
+}
+
+.services-preview p {
+    margin-bottom: 2rem;
+}
+
+.services-preview button {
+    padding: 0.8rem 1.5rem;
+
+    border: 1px solid var(--border-accent);
+    border-radius: 6px;
+
+    background-color: var(--border-accent);
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   14. FOOTER
+   ========================================================= */
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    border-top: 1px solid var(--border-color);
+
+    text-align: center;
+}
+
+footer p {
+    margin-inline: auto;
+
+    font-size: 0.85rem;
+}
+
+/* =====================================================
+   MOBILE MENU BUTTON
+   ===================================================== */
+
+.mobile-toggle {
+    display: none;
+
+    width: 48px;
+    height: 48px;
+
+    padding: 10px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 12px;
+
+    background: var(--bg-secondary);
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.mobile-toggle span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    background: var(--text-primary);
+
+    border-radius: 2px;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+   ===================================================== */
+
+.mobile-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background: var(--bg-secondary);
+
+    border-bottom: 1px solid var(--border-color);
+
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    margin: 0;
+    padding: 10px 20px;
+
+    list-style: none;
+}
+
+.mobile-menu li {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-menu li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu a {
+    display: block;
+
+    padding: 15px 5px;
+
+    color: var(--text-primary);
+
+    text-decoration: none;
+
+    font-family: var(--font-body);
+}
+
+
+/* =====================================================
+   ARTWORK MODAL
+   ===================================================== */
+
+.artwork-modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    z-index: 2000;
+
+    overflow-y: auto;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.artwork-modal.active {
+    display: flex;
+}
+
+
+/* Modal Close */
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 50%;
+
+    background: var(--bg-secondary);
+
+    color: var(--text-primary);
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+
+/* Modal Image */
+
+.modal-image-container {
+    width: 100%;
+}
+
+.modal-image-container img {
+    display: block;
+
+    width: 100%;
+    max-height: 65vh;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+
+/* Modal Information */
+
+.modal-info {
+    padding-top: 20px;
+}
+
+.modal-info h2 {
+    margin: 0 0 10px;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+}
+
+.modal-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+}
+
+.modal-info p {
+    color: var(--text-secondary);
+
+    line-height: 1.7;
+}
+
+
+/* Modal Navigation */
+
+.modal-navigation {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.modal-navigation button {
+    padding: 10px 16px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 8px;
+
+    background: var(--bg-secondary);
+
+    color: var(--text-primary);
+
+    cursor: pointer;
+}
+
+
+/* Prevent page scrolling when modal is open */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FOOTER SOCIAL ICONS
+   ========================================================= */
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.social-media a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    background-color: var(--bg-secondary);
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.social-media img {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+
+    /* Make dark SVG icons visible */
+    filter: brightness(0) invert(1);
+}
+
+.social-media a:hover {
+    border-color: var(--border-accent);
+
+    background-color: var(--border-accent);
+}
+
+.social-media a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* =========================================================
+   15. PORTFOLIO HERO
+   ========================================================= */
+
+.portfolio-hero {
+    width: min(1000px, 90%);
+
+    margin-inline: auto;
+
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+}
+
+.portfolio-hero h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+    letter-spacing: -0.04em;
+}
+
+.portfolio-hero h3 {
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   16. PORTFOLIO CONTROLS
+   ========================================================= */
+
+.portfolio-controls {
+    width: min(1200px, 90%);
+
+    margin: 0 auto 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: 1rem 0;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+/* =========================================================
+   17. SEARCH
+   ========================================================= */
+
+.search-container {
+    flex: 1;
+    max-width: 450px;
+}
+
+.search-container input {
+    width: 100%;
+
+    padding: 0.8rem 1rem;
+
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+
+    outline: none;
+
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+
+    font-family: var(--font-body);
+}
+
+.search-container input::placeholder {
+    color: var(--text-secondary);
+}
+
+.search-container input:focus {
+    border-color: var(--border-accent);
+}
+
+
+/* =========================================================
+   18. FILTER BUTTONS
+   ========================================================= */
+
+.filter-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    flex-wrap: wrap;
+}
+
+.filter-btn-container button {
+    padding: 0.6rem 1rem;
+
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+
+    font-size: 0.85rem;
+}
+
+.filter-btn-container button:hover,
+.filter-btn-container button.active {
+    border-color: var(--border-accent);
+
+    background-color: var(--border-accent);
+
+    color: var(--text-primary);
+}
+
+
+/* =========================================================
+   19. ARTWORK GRID
+   ========================================================= */
+
+.artwork-grid {
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.5rem;
+
+    padding-bottom: 6rem;
+}
+
+
+/* =========================================================
+   20. ARTWORK CARD
+   ========================================================= */
+
+.artwork-card {
+    min-width: 0;
+
+    background-color: var(--bg-card);
+
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px var(--shadow-card);
+}
+
+.artwork-card-button {
+    width: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    background: none;
+
+    color: inherit;
+
+    text-align: left;
+}
+
+.artwork-card-button img {
+    width: 100%;
+    height: 380px;
+
+    object-fit: cover;
+
+    background-color: var(--bg-secondary);
+}
+
+.artwork-card-info {
+    padding: 1rem 1.1rem;
+}
+
+.artwork-card-info h2 {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   21. NO RESULTS
+   ========================================================= */
+
+.no-results {
+    grid-column: 1 / -1;
+
+    padding: 5rem 2rem;
+
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    background-color: var(--bg-card);
+
+    text-align: center;
+}
+
+.no-results h2 {
+    margin-bottom: 0.5rem;
+}
+
+.no-results p {
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   22. ARTWORK MODAL
+   ========================================================= */
+
+.modal-container {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-container.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+
+    width: min(1000px, 90vw);
+    max-height: 90vh;
+
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+
+    background-color: var(--bg-secondary);
+
+    box-shadow: 0 20px 60px var(--shadow-card);
+}
+
+.modal-content > button {
+    position: absolute;
+
+    top: 1rem;
+    right: 1rem;
+
+    z-index: 2;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.modal-content > img {
+    width: 100%;
+    height: 100%;
+
+    max-height: 80vh;
+
+    object-fit: contain;
+
+    background-color: var(--bg-primary);
+}
+
+.modal-info {
+    padding: 3rem 2rem;
+    overflow-y: auto;
+}
+
+.modal-info h2 {
+    margin: 0 0 10px;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+.modal-info p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.modal-info [data-modal-category] {
+    color: var(--border-accent);
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   24. ABOUT PAGE
+   ========================================================= */
+
+body > main:not(.hero):not(.portfolio-hero) {
+    width: min(900px, 90%);
+
+    margin-inline: auto;
+
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+body > main:not(.hero):not(.portfolio-hero) h1 {
+    margin-top: 4rem;
+}
+
+body > main:not(.hero):not(.portfolio-hero) h1:first-child {
+    margin-top: 0;
+}
+
+body > main:not(.hero):not(.portfolio-hero) h3 {
+    margin-top: 1rem;
+}
+
+body > main:not(.hero):not(.portfolio-hero) p {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   25. SERVICES / CONTACT BASE
+   ========================================================= */
+
+main:empty {
+    min-height: 70vh;
+}
+
+
+/* =========================================================
+   26. 404 PAGE BASE
+   ========================================================= */
+
+body:has(main:empty) {
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   27. FOCUS STATES
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--border-accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   28. SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--border-accent);
+}
+
+/* ========================================
+   SERVICES PAGE
+======================================== */
+
+/* Main Services Content */
+main {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   SERVICES HERO
+======================================== */
+
+main > .hero {
+    padding: 100px 0 80px;
+    text-align: center;
+}
+
+main > .hero h1 {
+    max-width: 850px;
+    margin: 0 auto 25px;
+    color: var(--text-primary);
+}
+
+main > .hero h3 {
+    margin-bottom: 25px;
+    color: var(--border-accent);
+    font-family: var(--font-heading);
+}
+
+main > .hero p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   SERVICE SECTIONS
+======================================== */
+
+.character-art,
+.portraits,
+.commercial-artwork {
+    margin: 40px 0;
+    padding: 50px;
+    
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+
+    box-shadow: 0 10px 30px var(--shadow-card);
+}
+
+
+/* Service Headings */
+
+.character-art h1,
+.portraits h1,
+.commercial-artwork h1 {
+    margin-bottom: 25px;
+    color: var(--text-primary);
+}
+
+
+/* Service Description */
+
+.character-art p,
+.portraits p,
+.commercial-artwork p {
+    max-width: 800px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+
+/* Small Heading */
+
+.character-art h3,
+.portraits h3,
+.commercial-artwork h3 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+
+/* ========================================
+   SERVICE BUTTONS
+======================================== */
+
+.character-art a,
+.portraits a,
+.commercial-artwork a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 24px;
+
+    color: var(--text-primary);
+    background: var(--border-accent);
+
+    border: 1px solid var(--border-accent);
+    border-radius: 6px;
+
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.character-art a:hover,
+.portraits a:hover,
+.commercial-artwork a:hover {
+    background: var(--border-accent-hover);
+    border-color: var(--border-accent-hover);
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   PROCESS
+======================================== */
+
+.process {
+    margin: 80px 0;
+    padding: 60px 50px;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+}
+
+
+/* Main Process Heading */
+
+.process h1 {
+    margin-bottom: 45px;
+    color: var(--text-primary);
+
+    /* Accent underline */
+    text-decoration-line: underline;
+    text-decoration-color: var(--border-accent);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+}
+
+
+/* Process Steps */
+
+.process h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    color: var(--border-accent);
+    font-family: var(--font-heading);
+}
+
+.process p {
+    max-width: 800px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   FAQ
+======================================== */
+
+.FAQ {
+    margin: 80px 0;
+    padding: 60px 50px;
+
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+}
+
+
+/* FAQ Main Heading */
+
+.FAQ h1 {
+    margin-bottom: 45px;
+    color: var(--text-primary);
+
+    /* Accent underline */
+    text-decoration-line: underline;
+    text-decoration-color: var(--border-accent);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+}
+
+
+/* Individual Questions */
+
+.question {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.question:last-child {
+    border-bottom: none;
+}
+
+
+/* Question Heading */
+
+.question h3 {
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+}
+
+
+/* Question Answer */
+
+.question p {
+    max-width: 800px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   FAQ FIRST QUESTION
+======================================== */
+
+/*
+   Your first .question contains the question
+   before the "Frequently Asked Questions"
+   heading, so give it a little separation.
+*/
+
+.FAQ > .question:first-child {
+    padding-top: 0;
+}
+
+
+/* ========================================
+   SERVICES PAGE SPACING
+======================================== */
+
+.character-art + .portraits,
+.portraits + .commercial-artwork {
+    margin-top: 30px;
+}
+
+
+/* ========================================
+   SELECTION
+======================================== */
+
+main ::selection {
+    background: var(--border-accent);
+    color: var(--text-primary);
+}
+
+
+/* ========================================
+   ABOUT PAGE
+======================================== */
+
+
+/* ========================================
+   ABOUT THE ARTIST
+======================================== */
+
+.about-the-artist {
+    min-height: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 70px;
+
+    padding: 80px 0;
+}
+
+
+/* Text Side */
+
+.about-the-artist h1 {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+
+    text-decoration-line: underline;
+    text-decoration-color: var(--border-accent);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+}
+
+.about-the-artist h3 {
+    margin-bottom: 18px;
+    color: var(--border-accent);
+    font-family: var(--font-heading);
+}
+
+.about-the-artist p {
+    max-width: 600px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+
+/* Image Side */
+
+.av-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+}
+
+.av-img-container img {
+    width: min(100%, 380px);
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+    border: 1px solid var(--border-color);
+
+    background: var(--bg-card);
+
+    box-shadow:
+        0 20px 50px var(--shadow-card);
+}
+
+
+/* ========================================
+   GENERAL ABOUT SECTIONS
+======================================== */
+
+.more-about-me,
+.how-i-approach,
+.skills,
+.tools,
+.promise-to-become-better {
+    margin: 50px 0;
+    padding: 55px;
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 30px var(--shadow-card);
+}
+
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
+
+.more-about-me h1,
+.how-i-approach h1,
+.skills h1,
+.tools h1,
+.promise-to-become-better h1 {
+    margin-bottom: 30px;
+
+    color: var(--text-primary);
+
+    text-decoration-line: underline;
+    text-decoration-color: var(--border-accent);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+}
+
+
+/* ========================================
+   H2 / H3 / PARAGRAPH DIFFERENTIATION
+======================================== */
+
+/*
+   This fixes the problem where h2, h3
+   and p look too similar.
+*/
+
+.more-about-me h3,
+.skills h3,
+.tools h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+
+/* Paragraphs */
+
+.more-about-me p,
+.how-i-approach p,
+.skills p,
+.tools p,
+.promise-to-become-better p {
+    max-width: 800px;
+
+    margin-bottom: 20px;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   SKILLS
+======================================== */
+
+.skills h3 {
+    padding-left: 15px;
+
+    border-left: 3px solid var(--border-accent);
+}
+
+
+/* ========================================
+   TOOLS
+======================================== */
+
+.tools h3 {
+    padding-left: 15px;
+
+    border-left: 3px solid var(--border-accent);
+}
+
+
+/* ========================================
+   FINAL MESSAGE
+======================================== */
+
+.promise-to-become-better {
+    text-align: center;
+}
+
+.promise-to-become-better p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
+.contact-page {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+
+/* ========================================
+   CONTACT HERO
+======================================== */
+
+.contact-hero {
+    max-width: 850px;
+    margin: 0 auto 90px;
+    text-align: center;
+}
+
+.contact-hero h1,
+.contact-information h1,
+.contact-form-section h1,
+.commission-information h1 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    line-height: 1.2;
+
+    display: inline-block;
+
+    border-bottom: 3px solid var(--border-accent);
+
+    padding-bottom: 10px;
+}
+
+.contact-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    margin-bottom: 25px;
+}
+
+.contact-hero h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   MAIN CONTACT AREA
+======================================== */
+
+.contact-main {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 50px;
+    align-items: start;
+}
+
+
+/* ========================================
+   CONTACT INFORMATION
+======================================== */
+
+.contact-information,
+.contact-form-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+
+    padding: 40px;
+}
+
+.contact-information h1,
+.contact-form-section h1 {
+    font-size: 1.7rem;
+    margin: 0 0 25px;
+}
+
+.contact-information > h1,
+.contact-form-section > h1 {
+    display: inline-block;
+}
+
+.contact-detail {
+    padding-top: 25px;
+    margin-top: 25px;
+
+    border-top: 1px solid var(--border-color);
+}
+
+.contact-detail h3 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.contact-detail p,
+.contact-form-section > p {
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   EMAIL
+======================================== */
+
+.contact-email-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--border-accent);
+
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+}
+
+.contact-email-link:hover {
+    color: var(--border-accent-hover);
+}
+
+
+/* ========================================
+   SOCIAL LINKS
+======================================== */
+
+.contact-social-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.contact-social-links a {
+    display: block;
+
+    padding: 12px 15px;
+
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+
+    text-decoration: none;
+}
+
+.contact-social-links a:hover {
+    color: var(--text-primary);
+    border-color: var(--border-accent);
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+.contact-form-section > p {
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    color: var(--text-primary);
+}
+
+
+/* ========================================
+   FORM INPUTS
+======================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+
+    color: var(--text-primary);
+
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+
+    outline: none;
+}
+
+.form-group input,
+.form-group select {
+    min-height: 48px;
+}
+
+.form-group textarea {
+    min-height: 180px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+
+/* Select */
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--border-accent);
+}
+
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.contact-submit {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    background: var(--border-accent);
+
+    border: 1px solid var(--border-accent);
+
+    color: #ffffff;
+
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.contact-submit:hover {
+    background: var(--border-accent-hover);
+    border-color: var(--border-accent-hover);
+}
+
+
+/* ========================================
+   SUCCESS MESSAGE
+======================================== */
+
+.contact-success {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: var(--bg-secondary);
+
+    border-left: 3px solid var(--border-accent);
+}
+
+.contact-success h3 {
+    font-family: var(--font-heading);
+
+    color: var(--text-primary);
+
+    font-size: 1rem;
+
+    margin-bottom: 8px;
+}
+
+.contact-success p {
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   COMMISSION INFORMATION
+======================================== */
+
+.commission-information {
+    max-width: 850px;
+
+    margin: 100px auto 0;
+
+    padding: 45px 40px;
+
+    background: var(--bg-card);
+
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.commission-information h1 {
+    font-size: 1.7rem;
+
+    margin-bottom: 25px;
+}
+
+.commission-information h3 {
+    font-family: var(--font-heading);
+
+    color: var(--text-primary);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    margin-top: 35px;
+    margin-bottom: 12px;
+}
+
+.commission-information p {
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   404 ERROR PAGE
+   ========================================================= */
+
+.error-page {
+    min-height: calc(100vh - 180px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 24px;
+}
+
+
+.error-content {
+    width: 100%;
+    max-width: 750px;
+
+    text-align: center;
+
+    padding: 60px 40px;
+
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px var(--shadow-card);
+}
+
+
+/* 404 Number */
+
+.error-code {
+    margin: 0 0 10px;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(5rem, 15vw, 10rem);
+
+    font-weight: 800;
+
+    line-height: 0.9;
+
+    color: var(--border-accent);
+
+    letter-spacing: -5px;
+}
+
+
+/* Main Heading */
+
+.error-content h1 {
+    margin: 30px 0 16px;
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(1.8rem, 4vw, 3rem);
+
+    line-height: 1.2;
+
+    color: var(--text-primary);
+}
+
+
+/* Description */
+
+.error-description {
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    font-family: var(--font-body);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    color: var(--text-secondary);
+}
+
+
+/* Buttons */
+
+.error-actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Secondary Link */
+
+.error-secondary-link {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    font-family: var(--font-body);
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    color: var(--text-primary);
+
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--border-accent);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    margin-top: 120px;
+
+    background: var(--bg-secondary);
+
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER MAIN
+   --------------------------------------------------------- */
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns:
+        1.6fr
+        0.8fr
+        0.8fr
+        1.3fr;
+
+    gap: 60px;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER BRAND
+   --------------------------------------------------------- */
+
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+
+    display: block;
+}
+
+.footer-brand p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    max-width: 280px;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER COLUMNS
+   --------------------------------------------------------- */
+
+.footer-column h3,
+.footer-contact h3 {
+    margin: 0 0 20px;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+/* Navigation lists */
+
+.footer-column ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+
+    font-size: 0.88rem;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--border-accent-hover);
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER CONTACT
+   --------------------------------------------------------- */
+
+.footer-contact {
+    max-width: 280px;
+}
+
+.footer-contact p {
+    margin: 0 0 22px;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+
+/* CTA */
+
+.footer-cta {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 16px;
+
+    border: 1px solid var(--border-color);
+
+    color: var(--text-primary);
+
+    font-family: var(--font-body);
+
+    font-size: 0.85rem;
+
+    text-decoration: none;
+
+    background: var(--bg-card);
+}
+
+.footer-cta:hover {
+    border-color: var(--border-accent);
+
+    color: var(--text-primary);
+}
+
+.footer-cta span {
+    color: var(--border-accent-hover);
+
+    font-size: 1.1rem;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER BOTTOM
+   --------------------------------------------------------- */
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-bottom .container {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+
+    font-size: 0.75rem;
+}
+
+
+/* Accent detail */
+
+.footer-bottom p:first-child::first-letter {
+    color: var(--border-accent);
+}
+
+
+/* =========================================================
+   ARTWORK MODAL VISIBILITY FIX
+   ========================================================= */
+
+#artwork-modal {
+    display: none !important;
+}
+
+#artwork-modal.active {
+    display: flex !important;
+}
+
+
+/* =========================================================
+   AZART — PINTEREST STYLE MASONRY
+   ========================================================= */
+
+#artwork-grid {
+    width: 92%;
+    max-width: 1400px;
+    margin: 50px auto;
+
+    /* Masonry */
+    column-count: 3;
+    column-gap: 22px;
+}
+
+/* Every artwork becomes a masonry item */
+#artwork-grid .artwork-card {
+    width: 100%;
+    display: inline-block;
+
+    margin: 0 0 22px;
+
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+
+    vertical-align: top;
+}
+
+/* =========================================================
+   AZART — PINTEREST STYLE MASONRY PORTFOLIO
+   ========================================================= */
+
+/* The actual portfolio container */
+#artwork-grid {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+
+    /* IMPORTANT:
+       Do NOT use CSS Grid here.
+       Pinterest-style masonry needs columns.
+    */
+    display: block;
+
+    column-count: 3;
+    column-gap: 24px;
+
+    padding-bottom: 6rem;
+}
+
+
+/* =========================================================
+   ARTWORK CARD
+   ========================================================= */
+
+#artwork-grid .artwork-card {
+    width: 100%;
+
+    display: inline-block;
+
+    margin: 0 0 24px;
+
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+
+    min-width: 0;
+
+    background-color: var(--bg-card);
+
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px var(--shadow-card);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+/*
+   VERY IMPORTANT:
+   Remove the old fixed 380px height.
+   Let each artwork keep its natural aspect ratio.
+*/
+
+#artwork-grid .artwork-card-button {
+    display: block;
+
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+
+    background: none;
+
+    color: inherit;
+
+    text-align: left;
+}
+
+
+#artwork-grid .artwork-card-button img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    background-color: var(--bg-secondary);
+}
+
+
+/* =========================================================
+   CARD INFORMATION
+   ========================================================= */
+
+#artwork-grid .artwork-card-info {
+    padding: 1rem 1.1rem;
+
+    box-sizing: border-box;
+}
+
+
+#artwork-grid .artwork-card-info h2 {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   NO RESULTS
+   ========================================================= */
+
+#artwork-grid .no-results {
+    display: block;
+
+    width: 100%;
+
+    column-span: all;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+    #artwork-grid {
+        width: 90%;
+
+        column-count: 2;
+        column-gap: 20px;
+    }
+
+    #artwork-grid .artwork-card {
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    #artwork-grid {
+        width: 92%;
+
+        column-count: 2;
+        column-gap: 14px;
+    }
+
+    #artwork-grid .artwork-card {
+        margin-bottom: 14px;
+    }
+
+    #artwork-grid .artwork-card-info {
+        padding: 0.8rem;
+    }
+
+    #artwork-grid .artwork-card-info h2 {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    #artwork-grid {
+        width: 94%;
+
+        column-count: 2;
+        column-gap: 12px;
+    }
+
+    #artwork-grid .artwork-card {
+        margin-bottom: 12px;
+    }
+
+    #artwork-grid .artwork-card-info {
+        padding: 0.7rem;
+    }
+
+    #artwork-grid .artwork-card-info h2 {
+        font-size: 0.85rem;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 349px) {
+
+    #artwork-grid {
+        width: 95%;
+
+        column-count: 1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PORTFOLIO + MODAL FIX
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* -------------------------
+       PORTFOLIO CONTROLS
+       ------------------------- */
+
+    .portfolio-controls {
+        width: 92%;
+        margin: 0 auto 2rem;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .filter-btn-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .filter-btn-container button {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+
+    /* -------------------------
+       MASONRY
+       ------------------------- */
+
+    #artwork-grid {
+        width: 92%;
+        column-count: 2;
+        column-gap: 12px;
+    }
+
+    #artwork-grid .artwork-card {
+        width: 100%;
+        margin-bottom: 12px;
+
+        /* Important for 3D hover */
+        transform-style: preserve-3d;
+    }
+
+
+    /* -------------------------
+       ARTWORK MODAL
+       ------------------------- */
+
+    .modal-container {
+        padding: 12px;
+        align-items: center;
+        justify-content: center;
+        overflow-y: auto;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: 94vh;
+
+        /* Remove desktop two-column layout */
+        display: flex;
+        flex-direction: column;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        border-radius: 10px;
+    }
+
+    .modal-content > img {
+        width: 100%;
+        height: auto;
+        max-height: 55vh;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .modal-info {
+        width: 100%;
+        padding: 1.5rem 1.2rem 2rem;
+        overflow: visible;
+    }
+
+    .modal-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .modal-info p {
+        font-size: 0.9rem;
+    }
+
+    .modal-content > button {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Masonry */
+    #artwork-grid {
+        width: 94%;
+        column-count: 2;
+        column-gap: 10px;
+    }
+
+    #artwork-grid .artwork-card {
+        margin-bottom: 10px;
+        border-radius: 7px;
+    }
+
+    #artwork-grid .artwork-card-info {
+        padding: 0.65rem;
+    }
+
+    #artwork-grid .artwork-card-info h2 {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+
+    /* Filter tabs */
+    .filter-btn-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+
+        padding-bottom: 5px;
+
+        scrollbar-width: thin;
+    }
+
+    .filter-btn-container button {
+        flex-shrink: 0;
+        padding: 0.55rem 0.8rem;
+        font-size: 0.78rem;
+    }
+
+
+    /* Modal */
+    .modal-container {
+        padding: 8px;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-height: 96vh;
+    }
+
+    .modal-content > img {
+        max-height: 48vh;
+    }
+
+    .modal-info {
+        padding: 1.2rem 1rem 1.5rem;
+    }
+
+    .modal-info h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 349px) {
+
+    #artwork-grid {
+        width: 94%;
+        column-count: 1;
+    }
+
+    .modal-content > img {
+        max-height: 45vh;
+    }
+
+    .filter-btn-container {
+        gap: 0.4rem;
+    }
+}

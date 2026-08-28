@@ -1,0 +1,262 @@
+[
+    {
+        "id": 1,
+        "title": "Samurai Under the Red Moon",
+        "category": "abcc",
+        "year": 2026,
+        "imageURL": "../assets/artworks/samurai-under-the-red-moon.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A lone samurai rendered in silhouette against a deep red moon."
+    },
+    {
+        "id": 2,
+        "title": "White Haired Swordswoman",
+        "category": "Character Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/white-haired-swordswoman.png",
+        "featured": true,
+        "software": "Sketchbook",
+        "description": "A white-haired swordswoman in a flowing gray traditional robe, captured in a poised stance while holding a katana."
+    },
+    {
+        "id": 3,
+        "title": "Butterfly",
+        "category": "abcc",
+        "year": 2026,
+        "imageURL": "../assets/artworks/butterfly.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A delicate butterfly drawn in bold black linework, emhasizing the layered structure of its wings, flowing wing edges, and fine internal details."
+    },
+    {
+        "id": 4,
+        "title": "White-Haired Warrior",
+        "category": "Character Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/white-haired-warrior.png",
+        "featured": true,
+        "software": "Sketchbook",
+        "description": "A pale, white-haired warrior portrayed in elegan traditional robes, with long flowing hair tied with delicate floral ornaments and piercing light-blue eyes."
+    },
+    {
+        "id": 5,
+        "title": "Miss Molly",
+        "category": "Character Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/miss-molly.png",
+        "featured": true,
+        "software": "Sketchbook",
+        "description": "A graceful woman with long, flowing silver hair, soft features and expressive eyes, portrayed looking, back over her shoulder in an elegant pose."
+    },
+    {
+        "id": 6,
+        "title": "Kitsune",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/kitsune.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A fierce kitsune portrayed with pointed fox ears, striking red eyes and multiple fox companions surrounding her."
+    },
+    {
+        "id": 7,
+        "title": "Samurai Meditation",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/samurai-meditation.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A lone samurai sits in meditation on a rock, with a katana resiting across her lap beneath a dark full moon."
+    },
+    {
+        "id": 8,
+        "title": "Samurai at Moonlight",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/silent-warrior.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A monochrome samurai scene portraying solitude, discipline and quiet strength beneath the moon."
+    },
+    {
+        "id": 9,
+        "title": "Floral Portrait",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/floral-portrait.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A delicate side-profile portrait of a woman surrounded by blooming pink flowers and green leaves."
+    },
+    {
+        "id": 10,
+        "title": "Fox Spirit",
+        "category": "abcc",
+        "year": 2026,
+        "imageURL": "../assets/artworks/fox-spirit.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A mystical white-haired fox spirit accompied by a white fox, both depicted with striking turquoise eyes."
+    },
+    {
+        "id": 11,
+        "title": "Long Wavy Hairstyle Study",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/long-wavy-hairstyle-study.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A detailed hairstyle study featuring long, flowing waves gathered into a high bun, with layered strands framing the faceless portrait."
+    },
+    {
+        "id": 12,
+        "title": "Samurai Geisha",
+        "category": "Character Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/samurai-geisha.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A japanese warrior woman portrayed in an ornate floral kimono with a decorated traditional hairstyle."
+    },
+    {
+        "id": 13,
+        "title": "Ikigai Blade",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/ikigai-blade.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A minimalist Japanese-inspired composition centered on a katana, surrounded bby expressive ink strokes and the Japanese characters for Ikigai."
+    },
+    {
+        "id": 14,
+        "title": "Bushido Blade",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/bushido-blade.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A minimalist Japanese-inspired composition featuring a katana suspended above bold Japanese calligraphy representing Bushido."
+    },
+    {
+        "id": 15,
+        "title": "Ronin's Journey",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/ronin's-journey.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A lone ronin strands at the edge of a windswept cliff, carrying two swords beneath a traditional conical hat."
+    },
+    {
+        "id": 16,
+        "title": "Makima",
+        "category": "Character Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/makima.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A portrait of Makima from Chainsaw Man, featuring her distincive red hair."
+    },
+    {
+        "id": 17,
+        "title": "Masked Man",
+        "category": "Character Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/masked-man.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A masked man portrayed in profile, wearing a muted green outer garment and burgundy head covering."
+    },
+    {
+        "id": 18,
+        "title": "Pink Haired Woman",
+        "category": "Character Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/pink-haired-woman.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A soft pastel portrait of a pink-haired woman wearing round glasses and a pink outfit."
+    },
+    {
+        "id": 19,
+        "title": "Connection",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/connection.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "Two hands reaching toward each other with intertwined pink hearts connecting their fingertips."
+    },
+    {
+        "id": 20,
+        "title": "Thomas Shelby",
+        "category": "Character Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/vintage-portrait.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A stylished monochrome portrait of Thomas Shelby"
+    },
+    {
+        "id": 21,
+        "title": "Gwen Stacy's Death",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/gwen-stacy's-death.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A dark tribute to the tragic death of Gwen Stacy in The Amazing Spider-Man 2."
+    },
+    {
+        "id": 22,
+        "title": "Flying Kick",
+        "category": "abcc",
+        "year": 2026,
+        "imageURL": "../assets/artworks/flying-kick.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A dynamic silhouette of a martial artist executing a powerful flying side kick."
+    },
+    {
+        "id": 23,
+        "title": "Fox Spirit",
+        "category": "Character Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/fox-spirit-leaves.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A striking fox spirit with long white hair, pointed fox ears and vivid crimson eyes, adorned with red leaves and a rose."
+    },
+    {
+        "id": 24,
+        "title": "Fox Spirit",
+        "category": "abcc",
+        "year": 2026,
+        "imageURL": "../assets/artworks/wolf-spirit.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A side-profile portrait on a fox-human hybrid with lavender hair, pointed fox ears and a fox head emerging behind the character."
+    },
+    {
+        "id": 25,
+        "title": "The Wolf and the Wanderer",
+        "category": "Portrait Art",
+        "year": 2026,
+        "imageURL": "../assets/artworks/the-wolf-and-the-wanderer.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A lone woman in silhouette stands face-to-face with a towering wolf."
+    },
+    {
+        "id": 26,
+        "title": "Symbolic Blade Girl",
+        "category": "abcc",
+        "year": 2026,
+        "imageURL": "../assets/artworks/symbolic-blade-girl.png",
+        "featured": false,
+        "software": "Sketchbook",
+        "description": "A symbolic monochrome warrior study exploring discipline, resilience, responsibility and the weight carried along a chosen path."
+    }    
+]

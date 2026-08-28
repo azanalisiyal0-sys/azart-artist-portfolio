@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://azanalisiyal0-sys.github.io/azart-artist-portfolio/sitemap.xml
