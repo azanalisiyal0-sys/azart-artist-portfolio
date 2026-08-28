@@ -258,5 +258,15 @@
         "featured": false,
         "software": "Sketchbook",
         "description": "A symbolic monochrome warrior study exploring discipline, resilience, responsibility and the weight carried along a chosen path."
-    }    
+    },
+    {
+        "id": 27,
+        "title": "Makima",
+        "category": "Portrait",
+        "year": 2026,
+        "imageURL": "assets/artworks/Makima.png",
+        "featured": true,
+        "software": "Sketchbook",
+        "description": "A stylized portrait of Makima from Chainsaw Man."
+    }
 ]
