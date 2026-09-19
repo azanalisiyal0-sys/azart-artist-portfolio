@@ -2743,3 +2743,431 @@ main ::selection {
         gap: 0.4rem;
     }
 }
+
+
+
+
+
+/* =====================================================
+   PRODUCT GRID + CARDS
+   Paste at the bottom of css/style.css
+   ===================================================== */
+
+
+/* Grid: cards never get wider than 240px */
+
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 240px));
+    gap: 1.25rem;
+    justify-content: start;
+    align-items: start;
+}
+
+
+/* Card */
+
+.product-card {
+    width: 100%;
+    margin: 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* Button reset: removes the default light-gray "white bar" */
+
+.product-card .product-card-button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+/* Image: fixed ratio so every card is the same size */
+
+.product-card .product-card-button img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+
+/* Title area */
+
+.product-card .product-card-info {
+    padding: 0.75rem 0.85rem;
+    background: transparent;
+}
+
+.product-card .product-card-info h2 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #f2f2f2;
+}
+
+
+
+
+
+/* =====================================================
+   PRODUCT IMAGE SLIDER (inside the product modal)
+   Paste at the bottom of css/style.css
+   ===================================================== */
+
+
+/* Slider wrapper */
+
+.product-slider {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+
+/* Viewport: only ONE slide is visible at a time */
+
+.product-slider .product-slider-viewport {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    max-height: 65vh;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #111;
+    touch-action: pan-y;
+}
+
+
+/* Track: slides sit side by side and slide horizontally */
+
+.product-slider .product-slider-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.35s ease;
+    will-change: transform;
+}
+
+
+/* Each slide fills the full viewport width */
+
+.product-slider .product-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+}
+
+.product-slider .product-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/* Previous / next buttons */
+
+.product-slider .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0 0 3px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.product-slider .slider-btn:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.product-slider .slider-btn-prev {
+    left: 0.5rem;
+    right: auto;
+}
+
+.product-slider .slider-btn-next {
+    right: 0.5rem;
+    left: auto;
+}
+
+
+/* Dots */
+
+.product-slider .slider-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.75rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.product-slider .slider-dot {
+    position: static;
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.product-slider .slider-dot.active {
+    background: #fff;
+}
+
+
+/* The "hidden" attribute must win over the display rules above */
+
+.product-slider [hidden],
+.modal-info [data-modal-order][hidden] {
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   PRODUCTS PAGE: intro + ordering info
+   Paste at the bottom of css/style.css
+   ===================================================== */
+
+
+/* ---------- Intro (above the search bar) ---------- */
+
+.products-intro {
+    padding: 3rem 5% 1.5rem;
+}
+
+.products-eyebrow {
+    margin: 0 0 0.5rem;
+    color: #e63946;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.products-intro h1 {
+    margin: 0 0 1rem;
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.1;
+}
+
+.products-intro p {
+    max-width: 62ch;
+    margin: 0 0 0.9rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.products-intro a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #e63946;
+    text-underline-offset: 3px;
+}
+
+
+/* ---------- Ordering info (below the grid) ---------- */
+
+.products-info {
+    margin-top: 3rem;
+    padding: 4rem 5% 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.products-info h2 {
+    margin: 0 0 0.75rem;
+    color: #fff;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.products-info > p {
+    max-width: 62ch;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.7;
+}
+
+
+/* Steps */
+
+.products-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 2rem 0 3rem;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+}
+
+.products-steps li {
+    counter-increment: step;
+    padding: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.products-steps li::before {
+    content: counter(step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.9rem;
+    border-radius: 50%;
+    background: #e63946;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.products-steps h3 {
+    margin: 0 0 0.4rem;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.products-steps p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+
+/* Call to action */
+
+.products-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.products-cta h2 {
+    margin: 0 0 0.35rem;
+    font-size: 1.25rem;
+}
+
+.products-cta p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.6;
+}
+
+.products-cta-button {
+    flex-shrink: 0;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    background: #e63946;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.products-cta-button:hover {
+    background: #f04f5b;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .products-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .products-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
