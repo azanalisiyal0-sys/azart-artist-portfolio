@@ -1,0 +1,14 @@
+{
+    "id": "pr001",
+    "name": "Moonlit Ronin T-shirt",
+    "category": "T-shirts",
+    "productURL": "../assets/products/azart-pr-001-mockup.png",
+    "price": 1460,
+    "images": [
+        "../assets/products/azart-pr-001-1.png",
+        "../assets/products/azart-pr-001-2.png",
+        "../assets/products/azart-pr-001.png"
+    ],
+    "status": "In Stock",
+    "orderBtnLink": "https://al-fain.com/share-prod.html?design=0ywLEG3V1K3unGhEiaTx"
+}
