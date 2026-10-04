@@ -1,4 +1,4 @@
-{
+[{
     "id": "pr001",
     "name": "Moonlit Ronin T-shirt",
     "category": "T-shirts",
@@ -11,4 +11,32 @@
     ],
     "status": "In Stock",
     "orderBtnLink": "https://al-fain.com/share-prod.html?design=0ywLEG3V1K3unGhEiaTx"
-}
+},
+{
+    "id": "pr002",
+    "name": "Sakura Cat T-shirt",
+    "category": "T-shirts",
+    "productURL": "../assets/products/azart-pr-002-mockup.png",
+    "price": 1460,
+    "images": [
+        "../assets/products/azart-pr-002-3.jpg",
+        "../assets/products/azart-pr-002-2.png",
+        "../assets/products/azart-pr-002.png"
+    ],
+    "status": "In Stock",
+    "orderBtnLink": "*"
+},
+{
+    "id": "pr003",
+    "name": "Sakura Cat Hoodie",
+    "category": "Hoodies",
+    "productURL": "../assets/products/azart-pr-002-1.png",
+    "price": 1460,
+    "images": [
+        "../assets/products/azart-pr-002-1.png",
+        "../assets/products/azart-pr-002-2.png",
+        "../assets/products/azart-pr-002.png"
+    ],
+    "status": "In Stock",
+    "orderBtnLink": "*"
+}]
