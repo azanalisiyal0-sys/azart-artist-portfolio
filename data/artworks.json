@@ -268,5 +268,15 @@
         "featured": true,
         "software": "Sketchbook",
         "description": "A stylized portrait of Makima from Chainsaw Man."
+    },
+    {
+        "id": 27,
+        "title": "Akari Takahashi",
+        "category": "Portrait",
+        "year": 2026,
+        "imageURL": "assets/artworks/akari-takahashi.png",
+        "featured": true,
+        "software": "Sketchbook",
+        "description": "A beautiful blend of traditional Japanese aesthetics and artistic elegance. Akari Takahashi captures the spirit of a graceful yet fearless warrior, adorned with delicate cherry blossoms, a floral kimono, and a traditional pink Japanese umbrella. Inspired by Japanese culture, samurai elegance, and the timeless beauty of Sakura, this illustration brings strength, mystery, and beauty together in one frame."
     }
 ]
